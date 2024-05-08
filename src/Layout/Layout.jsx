@@ -6,7 +6,7 @@ const Layout = ({children}) => {
   return (
     <>
     <Navbar/>
-    <main className='px-10'>
+    <main className='inter-font'>
         {children}
     </main>
     <Footer/>

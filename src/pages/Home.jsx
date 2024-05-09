@@ -1,7 +1,8 @@
 import React from 'react'
 import Layout from '../Layout/Layout'
-import studentPng from "../assets/student.png"
 import '../App.css'
+import CourseCard from '../components/Cards/CourseCard'
+import CoursesDb from '../CourseDb'
 
 const Home = () => {
   return (  
@@ -19,7 +20,7 @@ const Home = () => {
             </div>
           </div>
           <div className='hero-img-wrapper w-1/2'>
-              <img src={studentPng} alt="student" className=''/>
+              <img src={"./assets/student.png"} alt="student" className=''/>
           </div>
       </section>
 
@@ -35,13 +36,36 @@ const Home = () => {
             <h6 className="text-xl text-center text-orange-700 mt-6">Successful Transitions</h6>
           </div>
           <div className="highlight-card-3 p-16 flex flex-col items-center justify-center bg-[#ECF7FD] rounded-xl">
-            <h2 className="md:text-5xl text-green-700">56 %</h2>
-            <h6 className="text-xl text-center text-green-700 mt-6">Average Salary Hike</h6>
+            <h2 className="md:text-5xl text-blue-700">56 %</h2>
+            <h6 className="text-xl text-center text-blue-700 mt-6">Average Salary Hike</h6>
           </div>
           <div className="highlight-card-4 p-16 flex flex-col items-center justify-center bg-[#F7D6FC] rounded-xl">
-            <h2 className="md:text-5xl text-green-700">60 +</h2>
-            <h6 className="text-xl text-center text-green-700 mt-6">Hiring Partners</h6>
+            <h2 className="md:text-5xl text-pink-700">60 +</h2>
+            <h6 className="text-xl text-center text-pink-700 mt-6">Hiring Partners</h6>
           </div>
+      </section>
+
+
+      {/* ==================Featured Courses================== */}
+
+      <section className="featured-courses-section md:px-14 my-20">
+        <div className="section-header text-center">
+          <h2 className="text-4xl font-semibold mb-3">Featured Course</h2>
+          <p className='md:px-36 text-base text-slate-500'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias voluptatum, repellendus autem temporibus praesentium molestiae explicabo possimus obcaecati eligendi commodi nulla repudiandae  consequatur, beatae voluptatem est.</p>
+        </div>
+
+        {/* =========Courses============== */}
+
+          <div className="courses-wrapper my-10 flex justify-center gap-6 gap-y-10 flex-wrap">
+            {
+              CoursesDb.map((data,index)=>{
+                return(
+                  <CourseCard key={index} title={data.title} image={data.image} />
+                )
+              })
+            }
+          </div>
+
       </section>
 
     </Layout>

@@ -3,3 +3,23 @@
   padding: 0;
   /* box-sizing: border-box; */
 }
+
+.highlight-card-1 {
+  clip-path: polygon(0 0, 94% 5%, 100% 99%, 0 100%);
+  width: 100%;
+}
+
+.highlight-card-2 {
+  clip-path: polygon(0 0, 100% 0, 89% 97%, 8% 97%);
+  width: 100%;
+}
+
+.highlight-card-3 {
+  clip-path: polygon(0 0, 100% 0, 89% 97%, 8% 97%);
+  width: 100%;
+}
+
+.highlight-card-4 {
+  clip-path: polygon(8% 4%, 100% 0, 100% 99%, 0 100%);
+  width: 100%;
+}

@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <header>
-        <nav className={`flex justify-between items-center md:px-10 lg:px-16 text-white fixed transition-all duration-500 ${navbarVisible ?'backdrop-blur-sm bg-white/30':''} w-full`}>
+        <nav className={`flex justify-between items-center md:px-10 lg:px-16 text-white fixed transition-all duration-500 ${navbarVisible ?'backdrop-blur-md bg-white/30':''} w-full`}>
             <div className='py-4'>
                 <NavLink to='/' className='text-2xl font-semibold text-white'>Digitaldeta</NavLink>
             </div>
